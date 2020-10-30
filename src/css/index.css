@@ -1,0 +1,19 @@
+.card{
+    background-color: cornsilk;
+}
+
+.container{
+    margin-top: 4rem;
+    
+}
+.btn{
+    margin-top: 1rem;
+}
+.fa{
+    color: brown;
+    text-align: center;
+    font-size: 3rem;
+}
+.nav{
+   background-color: #61000b;
+}

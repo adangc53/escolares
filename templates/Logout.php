@@ -1,0 +1,12 @@
+<?php 
+if(!isset($_SESSION))
+    session_start();
+    ob_start();
+    session_regenerate_id(true);
+$idnew=session_id();
+$_SESSION['tu']="";
+$_SESSION=array();
+$_SESSION['corr']="";
+session_destroy();
+header("location:../index.html")
+?>
