@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="style.css">
-=======
+
   
->>>>>>> 59880bd (1.0.0.1)
+
     <title>Document</title>
 </head>
 <body>
@@ -15,15 +15,14 @@
     <?php include("Navbar.php") ?>
     <div class="container text-center mt-2">
         <p class="h2">Catalogo de usuarios</p>
-<<<<<<< HEAD
+        <button id="AddUser" class="btn btn-primary float-lg-right mb-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i></button>
         
     </div>
     <div id="tabla" class="container" ></div>
     <script >
         $("#tabla").load("templates/TableUsers.php");
     </script>
-=======
-        <button id="AddUser" class="btn btn-primary float-lg-right mb-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i></button>
+        
     </div>
     
    <section >
@@ -60,6 +59,6 @@
     </div>
   </div>
 </div>
->>>>>>> 59880bd (1.0.0.1)
+
 </body>
 </html>

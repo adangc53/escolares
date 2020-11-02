@@ -61,11 +61,8 @@
 <script src="src/bootstrap/js/jquery.min.js"></script>
 <script  src="src/bootstrap/js/bootstrap.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<<<<<<< HEAD
-<script  type="text/javascript" src="js/index.js"></script>
-=======
 
->>>>>>> 59880bd (1.0.0.1)
+<script  type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
 
