@@ -16,7 +16,7 @@ $(document).ready(function () {
             else{
                 console.log(respuesta)
                 limpiar();
-                $("#exampleModal").modal('hide');
+                $('.close:visible').click();
                 //$(".modal").hide();
                // $(".modal-backdrop").hide();
                 
