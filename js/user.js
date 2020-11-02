@@ -16,11 +16,7 @@ $(document).ready(function () {
             else{
                 console.log(respuesta)
                 limpiar();
-                $('.close:visible').click();
-                //$(".modal").hide();
-               // $(".modal-backdrop").hide();
-                
-                
+                $('.close:visible').click();  
             }
         } // fin del success
         
