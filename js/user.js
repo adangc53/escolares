@@ -37,4 +37,8 @@ $(document).ready(function () {
         $("#user").val("");
         $("#password").val("");
     };
+
+    $('#delete').on('click', function(e) {
+        console.log("Hola");
+    });
 });
