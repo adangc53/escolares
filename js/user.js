@@ -9,11 +9,18 @@ $(document).ready(function () {
         type:"POST",
         data:parametros,
         success:function(respuesta){
-            if(respuesta==0){
-                alert('Faltan datos de entradam, ingrese usuario y contraseña');
+            if(respuesta=="400"){
+                alert('Faltan datos de entradam, ingrese usuario y contraseña error: '+respuesta);
+
             }
             else{
                 console.log(respuesta)
+                limpiar();
+                $("#exampleModal").modal('hide');
+                //$(".modal").hide();
+               // $(".modal-backdrop").hide();
+                
+                
             }
         } // fin del success
         
@@ -29,5 +36,9 @@ $(document).ready(function () {
         else{
             console.log("bien")
         }
+    };
+    function limpiar(){
+        $("#user").val("");
+        $("#password").val("");
     };
 });
