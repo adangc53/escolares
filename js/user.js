@@ -23,22 +23,15 @@ $(document).ready(function () {
     }); // fin de ajax    
     });
     
-    function validar(){
-        if ($('#user').val() == "" || $('#user').text() == null) {
-            
-            alert('Faltan datos de entrada');
-            return false;
-        } 
-        else{
-            console.log("bien")
-        }
-    };
+    
     function limpiar(){
         $("#user").val("");
         $("#password").val("");
     };
 
-    $('#delete').on('click', function(e) {
-        console.log("Hola");
+    $('.delete').on('click', function(e) {
+      
+      console.log("tlacua")
     });
+   
 });
