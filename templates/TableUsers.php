@@ -10,7 +10,7 @@ while (!$res -> EOF ){
     
    
    print "<tr><td class='text-center'>$resUser</td><td>$resPass</td>
-    <td><a href='#' class='selecciona ' data-user='$resUser' data-pass='$resPass'><i class=' fas fa-pen' aria-hidden='true'></i></a>
+    <td><a id='update' href='#' class='selecciona ' data-user='$resUser' data-pass='$resPass' data-toggle='modal' data-target='#exampleModal'><i class=' fas fa-pen' aria-hidden='true'></i></a>
     <a id='del'  class='selecciona' data-user='$resUser'> <i class='fas fa-trash mx-3' aria-hidden='true'></i></a> </td></tr>";
     
      $res ->MoveNext();
