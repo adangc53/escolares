@@ -39,6 +39,12 @@ function Deluser($user)
     $sql = "Delete from users where user= '{$user}'";
     return Ejecuta($sql);
 }
+function UpdateUser($user,$pass)
+{
+    $pwdEnc = password_hash($pass, PASSWORD_DEFAULT);
+    $sql = "update users set pass='{$pwdEnc}' where user= '{$user}'";
+    return Ejecuta($sql);
+}
 //----------------------home-----------------
 
 

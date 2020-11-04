@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
-
-  
-
     <title>Document</title>
 </head>
 <body>
@@ -15,7 +10,7 @@
     <?php include("Navbar.php") ?>
     <div class="container text-center mt-2">
         <p class="h2">Catalogo de usuarios</p>
-        <button id="AddUser" class="btn btn-primary float-lg-right mb-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i></button>
+        <button id="AddUser" class="btn btn-primary float-lg-right mb-2" value="" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user-plus"></i></button>
         
     </div>
     <div id="tabla" class="container" ></div>
@@ -53,7 +48,10 @@
           <input type="password" class="form-control" id="password" placeholder="Contraseña">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <div id="operation">
+      <input id="aaa" type="text" style="display:none;"  value="0">
+      </div>
+        <button id="closemodal" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <a id="Save"  class="btn btn-primary float-right " type="button">Guardar</a>
       </div>
     </div>
