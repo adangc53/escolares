@@ -33,6 +33,12 @@ function agregarusr($user,$pass)
     $sql = "Insert into users(user, pass) values('{$user}', '{$pwdEnc}')";
     return Ejecuta($sql);
 }
+function Deluser($user)
+{
+    
+    $sql = "Delete from users where user= '{$user}'";
+    return Ejecuta($sql);
+}
 //----------------------home-----------------
 
 
