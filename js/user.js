@@ -24,7 +24,7 @@ $(document).ready(function () {
                   }
                } // fin del success
         
-          }); // fin de ajax   
+          }); // fin de ajax   insert
                 } 
         else{
             $.ajax({
@@ -46,7 +46,7 @@ $(document).ready(function () {
                      }
                   } // fin del success
            
-             }); // fin de ajax   
+             }); // fin de ajax   Update
            
         }
     });
@@ -82,7 +82,7 @@ $(document).ready(function () {
                     }
                 } // fin del success
                 
-            }); // fin de ajax 
+            }); // fin de ajax Delete
         }
     });//cierra borrado
 $("#tabla").on("click","#update",function(){
@@ -90,9 +90,11 @@ $("#tabla").on("click","#update",function(){
 $("#aaa").val(1)
 $("#user").prop('disabled', true);
 });//cierra click update
+
 $('#closemodal').on('click', function(e){
     $("#user").val("");
     $("#aaa").val(0)
     $("#user").prop('disabled', false);
 });
+
 });
