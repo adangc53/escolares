@@ -47,9 +47,15 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Titulacion</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Constancias</a>
-      </li>
+      <?php  
+        if ($_SESSION["usuario"]=="master"||$_SESSION["usuario"]=="Constancias")
+        {
+          print "
+      <li class='nav-item active'>
+        <a class='nav-link' href='constancias.php'>Constancias<span class='sr-only'>(current)</span></a>
+      </li> ";
+    }
+    ?>
     </ul>
     <form class="form-inline my-2 my-lg-0">
     <a class="nav-link logout" href="templates/Logout.php">Cerrar sesion</a>
