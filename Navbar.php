@@ -45,7 +45,7 @@
         <a class="nav-link" href="#">Becas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Titulacion</a>
+        <a class="nav-link" href="Titulacion.php">Titulacion</a>
       </li>
       <?php  
         if ($_SESSION["usuario"]=="master"||$_SESSION["usuario"]=="Constancias")
