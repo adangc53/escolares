@@ -21,7 +21,7 @@
   </section>
  <section class="container mt-4">
  <p>
-  <a class="btn btn-success float-lg-right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn btn-success float-lg-right dateadd" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <i class="fa fa-plus" ></i>
   </a>
   
@@ -38,8 +38,8 @@
      <label for="NoControl">No. Control</label>
      <input type="text" id="NoControl" class="form-control">
      <label for="Date">Fecha</label>
-     <input type="datetime" id="Date"class="form-control">
-     <a href="#" class="btn btn-lg btn-secondary mt-2 float-lg-right" id="save">Guardar</a>
+     <input type="date" id="Date"class="form-control">
+     <a href="#" class="btn btn-lg btn-secondary mt-2 float-lg-right" id="save" >Guardar</a>
     </div>
 </div>
 </div>
@@ -89,5 +89,6 @@ $(document).ready(function(){
   });
 });
 </script>
+<script src="js/Constancias.js"></script>
 </body>
 </html>

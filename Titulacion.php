@@ -10,7 +10,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<?php include("Navbar.php") ?>
+   
 <div class="container mt-3">
   <h2>Filterable Table</h2>
   <p>Type something in the input field to search the table for first names, 
@@ -53,6 +54,7 @@
 </div>
 
 <script>
+ // print();
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();

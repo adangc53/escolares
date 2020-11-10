@@ -42,7 +42,7 @@
         <a class="nav-link" href="#">Graficas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Becas</a>
+        <a class="nav-link" href="Becas.php">Becas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Titulacion.php">Titulacion</a>
