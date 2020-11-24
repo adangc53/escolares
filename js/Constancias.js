@@ -2,9 +2,9 @@ $(document).ready(function () {
 
 $("#save").on('click', function(e){
    clear();
-   
+   $('#collapseExample').addClass('collapsing');
    $('#collapseExample').removeClass('show');
-});//save fucntion 
+});//save function 
 $(".dateadd").on('click', function(e){
     fecha()
 });
@@ -15,6 +15,8 @@ console.log(f.getFullYear() + "/" + (f.getMonth() +1) + "/" +f.getDate() );
 $("#Date").prop('disabled', true);
 }
 function clear(){
+    $("#folio").val("" )
+    $("#NoControl").val("" )
     $("#Date").val("" )
     $("#Date").prop('disabled', false);
 }

@@ -17,3 +17,6 @@
 .nav{
    background-color: #61000b;
 }
+body{
+    background-color: rgba(0, 0, 0, 0.075);
+}
