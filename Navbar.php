@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/navbar.css">
     <link rel="stylesheet" href="src/icons/css/all.css">
-    
     <title>Document</title>
 </head>
 <body>
