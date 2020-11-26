@@ -1,14 +1,13 @@
 <?php 
 include_once("../src/utilerias/database_utilerias.php");
     $folio=$_POST['folio'];
-    $nc=$_POST['nocontrol'];
-    $date =$_POST['date'];
-    if($folio==null||$nc==null){
+    
+    if($folio==null){
         echo 400;
        
     }
     else{
-        $res = InsertConstancia($folio,$nc,$date);
+        $res = DelConstancia($folio);
         echo 200;
     }
 

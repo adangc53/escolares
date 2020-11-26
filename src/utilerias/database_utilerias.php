@@ -61,6 +61,25 @@ function ConsltUsers(){
     
         return $Cn->Execute($s);
 }
+//-----------------------------------------------------
+//--- Constancias ------------------------------------
+function InsertConstancia($folio,$nc,$fecha){
+    global $Cn;
+    $s="insert into constancias(Folio,NoControl,Date) values('{$folio}','{$nc}','{$fecha}')";
+    
+        return $Cn->Execute($s);
+}
 
+function selectConstancia(){
+    global $Cn;
+    $s="select * from constancias";
+        return $Cn->Execute($s);
+}
+
+function DelConstancia($folio){
+    global $Cn;
+    $s="DELETE FROM constancias where Folio ='{$folio}'";
+    return $Cn->Execute($s);
+}
 
 ?>
