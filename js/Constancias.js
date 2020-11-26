@@ -10,15 +10,16 @@ $("#save").on('click', function(e){
         type:"POST",
         data:parametros,
         success:function($respuesta){
-            alert($respuesta)
+          
            if($respuesta==400){
                alert("Error faltan datos de entrada")
             
            }
            else{
-            alert("Error")
+            //alert("success")
                  clear();
                  colapsa();
+                 $("#tabla").load("templates/Tableconstancias.php");
            }
         } // fin del success
         
@@ -44,5 +45,30 @@ function colapsa(){
     $('#collapseExample').addClass('collapsing');
     $('#collapseExample').removeClass('show');
 }
+$("#tabla").on("click","#del",function(){
+    var folio = ($(this).attr("data-folio"));
+    console.log(folio)
+    var parametros = 'folio=' + folio;
+    
+        $.ajax({
+            url:"templates/DelConstancia.php",
+            type:"POST",
+            data:parametros,
+            success:function(respuesta){
+                if(respuesta=="400"){
+                    alert('Error de bnorado de datos  '+respuesta);
+    
+                }
+                else{
+                    console.log(respuesta)
+                    clear();
+                  //  $('.close:visible').click();  
+                    $("#tabla").load("templates/Tableconstancias.php");
+                }
+            } // fin del success
+            
+        }); // fin de ajax Delete
+   
+});//cierra borrado
 });//end document
 
