@@ -1,9 +1,18 @@
 $(document).ready(function () {
-
+   // $("#Date").prop('disabled', true);
+   fecha()
+    console.log($("#aaa").val())
 $("#save").on('click', function(e){
     var parametros = 'folio=' + $("#folio").val() +
     '&nocontrol=' + $("#NoControl").val()+
-    '&date=' + $("#Date").val(); 
+    '&date=' + $("#Date").val()+'&ops='+$("#aaa").val(); 
+    //$("#Date").prop('disabled', true);
+    opss=$("#aaa").val()
+    console.log(opss)
+    var urls="";
+    //if(opss=="inserta"){urls="templates/SaveConstancia.php"}
+    //if(opss==""){urls="templates/UpdateConstancia.php"}
+    console.log(urls)
     console.log(parametros)
     $.ajax({
         url:"templates/SaveConstancia.php",
@@ -20,6 +29,8 @@ $("#save").on('click', function(e){
                  clear();
                  colapsa();
                  $("#tabla").load("templates/Tableconstancias.php");
+                 $("#aaa").val("inserta")
+                // $("#Date").prop('disabled', false);
            }
         } // fin del success
         
@@ -27,23 +38,24 @@ $("#save").on('click', function(e){
    
 });//save function 
 $(".dateadd").on('click', function(e){
-    fecha()
+   // fecha()
 });
 function fecha(){
     var f = new Date();
     $("#Date").val(f.getFullYear() + "-" + (f.getMonth() +1) + "-" +f.getDate() )
 //console.log(f.getFullYear() + "/" + (f.getMonth() +1) + "/" +f.getDate() );
-$("#Date").prop('disabled', true);
+//$("#Date").prop('disabled', true);
 }
 function clear(){
     $("#folio").val("" )
     $("#NoControl").val("" )
     $("#Date").val("" )
-    $("#Date").prop('disabled', false);
+   // $("#Date").prop('disabled', false);
+   fecha()
 }
+
 function colapsa(){
-    $('#collapseExample').addClass('collapsing');
-    $('#collapseExample').removeClass('show');
+    document.getElementById("ckbtn").click();
 }
 $("#tabla").on("click","#del",function(){
     var folio = ($(this).attr("data-folio"));
@@ -70,5 +82,19 @@ $("#tabla").on("click","#del",function(){
         }); // fin de ajax Delete
    
 });//cierra borrado
+$("#tabla").on("click","#update",function(){
+    $("#folio").val(($(this).attr("data-folio")));
+    $("#NoControl").val(($(this).attr("data-nc")));
+    $("#Date").val(($(this).attr("data-fecha")))
+$("#aaa").val("actualiza")
+colapsa()
+//$("#folio").prop('disabled', true); //habilitar en success
+//$("#date").prop('disabled', false);
+});//cierra click update
+$("#clear").on("click",function(){
+  clear()
+   //fecha()
+   $("#aaa").val("inserta")
+});//cierra click update
 });//end document
 

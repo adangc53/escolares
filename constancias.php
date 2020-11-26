@@ -21,7 +21,7 @@
   </section>
  <section class="container mt-4">
  <p>
-  <a class="btn btn-success float-lg-right dateadd" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a id="ckbtn" class="btn btn-success float-lg-right dateadd" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <i class="fa fa-plus" ></i>
   </a>
   
@@ -39,14 +39,16 @@
      <input type="text" id="NoControl" class="form-control">
      <label for="Date">Fecha</label>
      <input type="date" id="Date"class="form-control">
+     
      <a href="#" class="btn btn-lg btn-secondary mt-2 float-lg-right" id="save" >Guardar</a>
+     <a href="#" class="btn btn-lg  mt-2 float-lg-right border mr-1" id="clear" >Limpiar</a>
     </div>
 </div>
 </div>
  </section>
  <div class="container text-center">
 <h1>Tabla de constancias emitidas</h1>   
-
+<input id="aaa" type="text" style="display:none;"  value="inserta">
 </div>
 <section>
 <div id="tabla" class="container" ></div>

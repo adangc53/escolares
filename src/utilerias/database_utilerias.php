@@ -81,5 +81,11 @@ function DelConstancia($folio){
     $s="DELETE FROM constancias where Folio ='{$folio}'";
     return $Cn->Execute($s);
 }
+function UpdateConstancias($folio,$nc,$date){
+    global $Cn;
+    $s="update constancias set NoControl= {$nc}, Date='{$date}' Where Folio={$folio}";
+    return $Cn -> Execute($s);
+    }
+
 
 ?>
