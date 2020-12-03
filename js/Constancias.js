@@ -7,13 +7,7 @@ $("#save").on('click', function(e){
     '&nocontrol=' + $("#NoControl").val()+
     '&date=' + $("#Date").val()+'&ops='+$("#aaa").val(); 
     //$("#Date").prop('disabled', true);
-    opss=$("#aaa").val()
-    console.log(opss)
-    var urls="";
-    //if(opss=="inserta"){urls="templates/SaveConstancia.php"}
-    //if(opss==""){urls="templates/UpdateConstancia.php"}
-    console.log(urls)
-    console.log(parametros)
+    
     $.ajax({
         url:"templates/SaveConstancia.php",
         type:"POST",

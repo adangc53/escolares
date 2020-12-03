@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/navbar.css">
     <link rel="stylesheet" href="src/icons/css/all.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <title>Document</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
     }
     ?>
       <li class="nav-item">
-        <a class="nav-link" href="#">Graficas</a>
+        <a class="nav-link" href="Graficas.php">Graficas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Becas.php">Becas</a>
