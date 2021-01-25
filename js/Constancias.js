@@ -12,14 +12,14 @@ $("#save").on('click', function(e){
         url:"templates/SaveConstancia.php",
         type:"POST",
         data:parametros,
-        success:function($respuesta){
+        success:function(respuesta){
           
-           if($respuesta==400){
+           if(respuesta==400){
                alert("Error faltan datos de entrada")
             
            }
            else{
-            //alert("success")
+            alert(respuesta)
                  clear();
                  colapsa();
                  $("#tabla").load("templates/Tableconstancias.php");

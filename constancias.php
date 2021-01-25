@@ -48,7 +48,7 @@
 </div>
  </section>
  <div class="container text-center">
-<h1>Tabla de constancias emitidas</h1>   
+<h1>Tabla de constancias</h1>   
 <input id="aaa" type="text" style="display:none;"  value="inserta">
 </div>
 <section>

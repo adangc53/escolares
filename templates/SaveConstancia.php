@@ -4,7 +4,7 @@ include_once("../src/utilerias/database_utilerias.php");
     $nc=$_POST['nocontrol'];
     $date =$_POST['date'];
     $ops=$_POST['ops'];
-   
+   echo $ops;
     
     if($folio==null||$nc==null){
         echo 400; 

@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="shortcut icon" href="icon.png" type="image/x-icon">
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/Constancias.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Titulacion</title>
 </head>
 <body>
 <?php include("Navbar.php") ?>
-   
-<div class="container mt-3">
-  <h2>Filterable Table</h2>
-  <p>Type something in the input field to search the table for first names, 
-  last names or emails:</p>  
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <section class="container text-center">
+        <p class="h2 mt-2">Catalogo de Titulacion</p>
+  </section>
+  <section>
+  <div class="container">
+  <form class="form-inline float-lg-right">
+  <input class="form-control float-lg-right" id="myInput" type="text" placeholder="Search..">
+    </form>
+  </div>
   <br>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody id="myTable">
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@mail.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@greatstuff.com</td>
-      </tr>
-      <tr>
-        <td>Anja</td>
-        <td>Ravendale</td>
-        <td>a_r@test.com</td>
-      </tr>
-    </tbody>
-  </table>
+  </section>
+ <section class="container mt-4">
+ <p>
+  <a id="ckbtn" class="btn btn-success float-lg-right dateadd" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <i class="fa fa-plus" ></i>
+  </a>
   
-  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+</p>
+<br>
+<br>
+<div class="collapse mt-2 DataCard" id="collapseExample">
+  <div class="card card-body">
+    <div class="form">
+     <label for="folio">
+            Folio
+     </label>
+     <input type="text" class="form-control" id="folio">
+     <label for="NoControl">No. Control</label>
+     <input type="text" id="NoControl" class="form-control">
+     <label for="Date">Fecha</label>
+     <input type="date" id="Date"class="form-control">
+     
+     <a href="#" class="btn btn-lg btn-secondary mt-2 float-lg-right" id="save" >Guardar</a>
+     <a href="#" class="btn btn-lg  mt-2 float-lg-right border mr-1" id="clear" >Limpiar</a>
+    </div>
 </div>
+</div>
+ </section>
+ <div class="container text-center">
+<h1>Tabla de titulacion</h1>   
+<input id="aaa" type="text" style="display:none;"  value="inserta">
+</div>
+<section>
+<div id="tabla" class="container" ></div>
+    <script >
+        $("#tabla").load("templates/TableTitulacion.php");
+    </script>
+</section>
 
 <script>
- // print();
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -65,6 +68,6 @@ $(document).ready(function(){
   });
 });
 </script>
-
+<script src="js/titulacion.js"></script>
 </body>
 </html>
