@@ -65,14 +65,14 @@ function ConsltUsers(){
 //--- Constancias ------------------------------------
 function InsertConstancia($folio,$nc,$fecha){
     global $Cn;
-    $s="insert into constancias(Folio,NoControl,Date) values('{$folio}','{$nc}','{$fecha}')";
+    $s="insert into constancias(Folio,NoControl,Date,departamento) values('{$folio}','{$nc}','{$fecha}','constancias')";
     
         return $Cn->Execute($s);
 }
 
 function selectConstancia(){
     global $Cn;
-    $s="select * from constancias";
+    $s="select * from constancias where departamento='constancias'";
         return $Cn->Execute($s);
 }
 
@@ -83,9 +83,19 @@ function DelConstancia($folio){
 }
 function UpdateConstancias($folio,$nc,$date){
     global $Cn;
-    $s="update constancias set NoControl= {$nc}, Date='{$date}' Where Folio={$folio}";
+    $s="UPDATE constancias set NoControl= {$nc}, Date='{$date}' Where Folio={$folio}";
     return $Cn -> Execute($s);
     }
-
-
+/////////titulacion////////////////////////////////////////////////////////////////
+function InsertTitulacion($folio,$nc,$fecha){
+    global $Cn;
+    $s="insert into constancias(Folio,NoControl,Date,departamento) values('{$folio}','{$nc}','{$fecha}','titulacion')";
+    
+        return $Cn->Execute($s);
+}
+function selectTitulacion(){
+    global $Cn;
+    $s="select * from constancias where departamento='titulacion'";
+        return $Cn->Execute($s);
+}
 ?>
