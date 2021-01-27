@@ -7,28 +7,38 @@
     <title>Graficas</title>
 </head>
 <body>
+
     <?php require_once("src/phpChart_Lite/conf.php") ?>
 <?php include("Navbar.php") ?>
 <div class="container mt-2">
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
+    <select name="depo" id="depo" class="form-control col-md-8">
+        <option value="titulacion">titulacion</option>
+    </select>
+    </div>
+    <div class="row justify-content-md-center mt-2">
         <input type="date" id ="startDate" class="form-control col-md-3 mr-2">
         <input type="date" id="endDAte" class="form-control col-md-3 ml-2">
     </div>
     <div class="row justify-content-md-center">
-        <a href="" id="filtro" class="btn btn-primary btn-lg mt-3">Graficar ciclo</a>
+        <a id="filtro" class="btn btn-primary btn-lg mt-3">Graficar ciclo</a>
     </div>
 </div>
 <div class="container">
     <div class="row justify-content-md-center">
+    
+    <input type="text" id ="dates" style="display:none;">
 <?php 
-    echo "<script src='js/graficas.js'> p()</script>";
-    $pc = new C_PhpChartX(array(array(11, 250, 5, 12, 4,6)),'basic_chart');
+echo '<script src="js/graficas.js"></script>';
+echo '<script language="javascript"> var dates=$("#dates").val();// console.log(dates);</script>';
+    $arreglos= array(0);
+    $pc = new C_PhpChartX(array($arreglos),'basic_chart');
     $pc->set_animate(true);
     $pc->set_title(array('text'=>'Basic Chart Animated'));
     $pc->draw();
 ?> 
 </div>
 </div>
-<script src="js/graficas.js"></script>
+
 </body>
 </html>
