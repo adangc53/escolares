@@ -98,4 +98,22 @@ function selectTitulacion(){
     $s="select * from constancias where departamento='titulacion'";
         return $Cn->Execute($s);
 }
+function selectBecas(){
+    global $Cn;
+    $s="select * from constancias where departamento='Becas'";
+        return $Cn->Execute($s);
+}
+///////////////Becas////////////////7
+function InsertBecas($folio,$nc,$fecha){
+    global $Cn;
+    $s="insert into constancias(Folio,NoControl,Date,departamento) values('{$folio}','{$nc}','{$fecha}','Becas')";
+    
+        return $Cn->Execute($s);
+}
+//////////////graficas ///////////////
+function consultagrafica(){
+    global $Cn;
+    $sql="SELECT COUNT(folio) as total FROM constancias";
+    return $Cn->Execute($sql);
+}
 ?>

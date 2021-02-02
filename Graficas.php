@@ -14,6 +14,9 @@
     <div class="row justify-content-center">
     <select name="depo" id="depo" class="form-control col-md-8">
         <option value="titulacion">titulacion</option>
+        <option value="Becas">Becas</option>
+        <option value="Constancias">Constancias</option>
+        
     </select>
     </div>
     <div class="row justify-content-md-center mt-2">
@@ -31,8 +34,9 @@
 <?php 
 echo '<script src="js/graficas.js"></script>';
 echo '<script language="javascript"> var dates=$("#dates").val();// console.log(dates);</script>';
-    $arreglos= array(0);
-    $pc = new C_PhpChartX(array($arreglos),'basic_chart');
+    $arreglos= array(0,112,250,215,77);
+
+    $pc = new C_PhpChartX(array($arreglos,array(223.338,323,412,123),array(119,401,243,121,273)),'basic_chart');
     $pc->set_animate(true);
     $pc->set_title(array('text'=>'Basic Chart Animated'));
     $pc->draw();
